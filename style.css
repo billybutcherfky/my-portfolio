@@ -175,28 +175,31 @@
     box-shadow: 0 0 10px #4acfee;
   }
   
-  .hero-img{
-    width: 400px;
-    height: 400px;
-    background-color: none;
-    position:relative;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    box-shadow: 0 0 10px #4eddfd;
-    transition: 0.5s;
-  }
-  
-  .hero-img:hover{
-    box-shadow: 0 0 25px #4acfee;
-  }
-  
-  .hero-img img{
-    position: absolute;
-    width: 85%;
-    mix-blend-mode: lighten;
-  }
+  .hero-img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px #4eddfd;
+  transition: 0.5s;
+  background-color: #000; /* optional: fallback bg color */
+}
+
+.hero-img:hover {
+  box-shadow: 0 0 25px #4acfee;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ this is key to cover the circle */
+  border-radius: 50%; /* optional, extra safety */
+}
+
   
   .info-sec{
     display: flex;
@@ -218,7 +221,7 @@
   .info-sec h1{
     font-size: 55px;
     text-transform: uppercase;
-    background:linear-gradient(to right, #4acfee, #53f8c9, #6070fd, #5bbdff, #4acfee);
+    background:linear-gradient(to right, #4acfee, #53f8c9, #60fde8, #5bbdff, #4acfee);
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
